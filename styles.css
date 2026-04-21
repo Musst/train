@@ -1,42 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background: #eef2f7;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #eef2f7, #d9e4f5);
+    margin: 0;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-h1 {
-    color: #333;
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.search-box {
+form {
     background: white;
-    padding: 20px;
-    width: 320px;
-    margin: 20px auto;
+    padding: 25px;
     border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-input, button {
-    width: 90%;
-    margin: 10px;
+input, select, button {
+    width: 100%;
     padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
     background: #007BFF;
     color: white;
     border: none;
-    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #0056b3;
 }
 
+#results {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .train {
     background: white;
-    margin: 15px auto;
-    padding: 15px;
     width: 320px;
-    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.train strong {
+    color: #007BFF;
 }
