@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>TrainGo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🚆 TrainGo</h1>
+<header>
+    <h1>🚆 TrainGo</h1>
+</header>
 
-<div class="search-box">
+<section class="search">
     <form id="searchForm">
-        <input type="text" id="depart" placeholder="Départ" required>
-        <input type="text" id="arrivee" placeholder="Arrivée" required>
+        <input type="text" id="depart" placeholder="Ville de départ" required>
+        <input type="text" id="arrivee" placeholder="Ville d’arrivée" required>
         <input type="date" id="date" required>
+
+        <select id="passagers">
+            <option>1 passager</option>
+            <option>2 passagers</option>
+            <option>3 passagers</option>
+        </select>
+
         <button type="submit">Rechercher</button>
     </form>
-</div>
+</section>
 
-<div id="results"></div>
-
-<script src="scripts.js"></script>
+<section id="results"></section>
 
 </body>
+<script src="script.js"></script>
 </html>
-
-function reserver() {
-    alert("Billet réservé !");
-}
-</script>
