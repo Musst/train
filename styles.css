@@ -5,7 +5,6 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-image: url("https://media.lesechos.com/api/v1/images/view/65ae2afcc335b7040a75f3ea/1280x720-webp/train.webp");
 }
 
 header {
@@ -22,7 +21,7 @@ header {
 }
 
 form {
-    background: white;
+    background-image: url("https://media.lesechos.com/api/v1/images/view/65ae2afcc335b7040a75f3ea/1280x720-webp/train.webp");
     padding: 25px;
     border-radius: 12px;
     width: 320px;
