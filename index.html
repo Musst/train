@@ -1,37 +1,29 @@
-<script>
-const form = document.getElementById("searchForm");
-const results = document.getElementById("results");
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrainGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
+<body>
 
-    const depart = document.getElementById("depart").value;
-    const arrivee = document.getElementById("arrivee").value;
-    const date = document.getElementById("date").value;
+<h1>🚆 TrainGo</h1>
 
-    results.innerHTML = "<h2>Résultats</h2>";
+<div class="search-box">
+    <form id="searchForm">
+        <input type="text" id="depart" placeholder="Départ" required>
+        <input type="text" id="arrivee" placeholder="Arrivée" required>
+        <input type="date" id="date" required>
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
 
-    // Simulation de trains
-    const trains = [
-        { heure: "08:00", duree: "1h00", prix: 25 },
-        { heure: "10:00", duree: "1h10", prix: 30 },
-        { heure: "14:00", duree: "0h55", prix: 35 }
-    ];
+<div id="results"></div>
 
-    trains.forEach(train => {
-        const div = document.createElement("div");
-        div.classList.add("train");
+<script src="script.js"></script>
 
-        div.innerHTML = `
-            <p><strong>${depart} → ${arrivee}</strong></p>
-            <p>${train.heure} | ${train.duree}</p>
-            <p>${train.prix} €</p>
-            <button onclick="reserver()">Réserver</button>
-        `;
-
-        results.appendChild(div);
-    });
-});
+</body>
+</html>
 
 function reserver() {
     alert("Billet réservé !");
